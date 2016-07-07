@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		* Exercise Two
+		* Why does the following output true?
+		*/
+
+		var a = "false";
+		var b = true;
+
+		// "&&" is "and"
+		console.log (a && b);
+		//console.log (b && a);
+
+		//var a "false" is actually a string (vs. an empty string), not a boolean value of false, so it's identified as being truthy and so when compared to the boolean value of true outputs true.
+
+		/*
+		* Bonus Question: Why does (b && a) log "false"? - it logs "false" b/c both values are truthy and short circuiting then takes the last value, which is the string "false".
+		*/
+
+		// Short Circuiting - first falsy value or last value with boolean &
+
+		(1 && 2 && 0 && 4)
+
+
+		//first truthy value or last value with boolean or
+
+		console.log(1 || "" || 0 || 4);
+
+		var a = prompt("What?");
+		var b = a || "default";
+
+		// !!"hello" - how to convert a truthy into a boolean
+	</script>
+</body>
+</html>
